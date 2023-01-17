@@ -1,0 +1,77 @@
+@import "../variables", "../mixins";
+
+.header {
+  min-height: 70vh;
+
+  .header__top {
+    padding: 1.2rem 1rem;
+    background-color: $lightBg;
+
+    .buttons__list {
+      display: flex;
+      justify-content: end;
+      gap: 1rem;
+    }
+
+    .item__btn {
+      @include headerButton;
+    }
+  }
+
+  .header__bottom {
+    background: url("/assets/images/bg.webp") no-repeat top;
+    background-size: cover;
+    padding: 1.5rem 1rem;
+
+    .bottom__description {
+      margin: 2.5rem 0;
+    }
+
+    .description__body {
+      span {
+        color: $lightSecondary;
+      }
+      margin: 0.7rem 0;
+      @include textStyle("", 2.4rem, bold, $whiteColor);
+    }
+
+    .description__btn {
+      @include BtnStyle(
+        0.8rem 3rem,
+        $whiteColor,
+        bold,
+        0.6rem,
+        1px solid $lightSecondary,
+        transparent
+      );
+      border-radius: 0.2rem;
+    }
+    .description__header {
+      @include textStyle("Meddon", 0.8rem, normal, $whiteColor);
+    }
+
+    .bottom__logo-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .header-bottom__logo {
+      width: 30%;
+    }
+
+    .buttons__catalog {
+      @include headerButton(0.8rem, bold, 0.6rem 1rem);
+    }
+
+    .navbar__buttons {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .buttons__list-button {
+      color: $whiteColor;
+      margin-top: 0.4rem;
+    }
+  }
+}

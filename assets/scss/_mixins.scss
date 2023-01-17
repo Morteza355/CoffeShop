@@ -1,0 +1,44 @@
+@mixin headerButton(
+  $fontSize: 1.1rem,
+  $fontWeight: normal,
+  $padding: 0.6rem,
+  $bgColor: #212121de
+) {
+  color: #fff;
+  background-color: $bgColor;
+  transition: color 0.3s;
+  padding: $padding;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  border: 0;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+  @include centerItem;
+
+  &:hover {
+    color: $lightSecondary;
+  }
+}
+
+@mixin centerItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin textStyle($fontFamily, $fontSize, $fontWeight, $color) {
+  @if ($fontFamily != "") {
+    font-family: $fontFamily;
+  }
+  color: $color;
+  font-weight: $fontWeight;
+  font-size: $fontSize;
+}
+
+@mixin BtnStyle($padding, $color, $fontWeight, $fontSize, $border, $bgColor) {
+  background-color: $bgColor;
+  border: $border;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  color: $color;
+  padding: $padding;
+}

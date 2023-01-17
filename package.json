@@ -1,0 +1,12 @@
+{
+  "name": "coffeshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch-sass": "sass --watch ./assets/scss:./assets/css --style=compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

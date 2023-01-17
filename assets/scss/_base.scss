@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Meddon";
+  src: url("../fonts/Meddon-Regular.ttf");
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins" !important;
+}
+
+*,
+::after,
+*::before {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
