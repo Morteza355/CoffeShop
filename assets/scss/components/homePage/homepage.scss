@@ -85,3 +85,74 @@
     line-height: 2;
   }
 }
+
+.main__products {
+  background: url("/assets/images/bg-2.jpg");
+  background-size: contain;
+  padding: 5rem 1.5rem;
+
+  .products__title {
+    @include textStyle("Meddon", 1.9rem, 100, $whiteColor);
+  }
+
+  .products {
+    display: flex;
+    margin-top: 3rem;
+    gap: 2rem;
+    overflow: auto;
+  }
+
+  .product {
+    min-width: 100%;
+  }
+
+  .product__image {
+    background-color: $darkBg;
+    padding: 3.5rem 1rem;
+    position: relative;
+  }
+
+  .discount {
+    border: 1px solid $lightSecondary;
+    @include textStyle("", 0.7rem, 100, $whiteColor);
+    padding: 0.3rem 0.6rem;
+    border-radius: 15px;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+}
+
+.product__description {
+  color: $whiteColor;
+  padding: 1.5rem 0.3rem;
+
+  .description__name {
+    font-size: 0.9rem;
+  }
+
+  .price,
+  .price__real-price {
+    font-size: 0.8rem;
+  }
+
+  .price {
+    text-decoration: line-through;
+    color: $textColor;
+  }
+
+  .stars__star {
+    display: inline-block;
+    font-size: 1.3rem;
+    padding: 0.5rem 0;
+  }
+
+  .stars__star::before {
+    content: "\2605\2605\2605";
+    color: $lightSecondary;
+  }
+
+  .stars__star::after {
+    content: "\2606\2606";
+  }
+}
