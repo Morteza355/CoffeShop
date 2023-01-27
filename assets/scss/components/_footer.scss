@@ -3,14 +3,59 @@
 .footer {
   background-color: $lightBg;
   position: relative;
-  padding: 10rem 1.5rem 3rem 1.5rem;
+  padding: 10rem 0rem 3rem 0rem;
+
+  .footer__copy-right {
+    @include textStyle("", 0.8rem, 100, $whiteColor);
+    padding: 2rem 1.5rem;
+    line-height: 2;
+  }
+
+  .footer__image {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .line {
+    width: 100%;
+    background-color: #444;
+    height: 1px;
+  }
+}
+
+.footer__lists {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 0 0 3rem 1.5rem;
+
+  .list {
+    width: calc(50% - 2rem);
+  }
+
+  a,
+  address {
+    @include textStyle("", 0.8rem, 100, $textColor);
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 0.7rem;
+  }
+
+  address {
+    line-height: 1.5;
+  }
+
+  h4 {
+    @include textStyle("", 0.9rem, 600, $whiteColor);
+    margin-bottom: 1rem;
+  }
 }
 
 .footer__contact {
   background-color: #0f0f0f;
   padding: 3rem;
   position: absolute;
-  bottom: 9rem;
+  bottom: 40rem;
   margin: 0 0.7rem;
   left: 0;
 
