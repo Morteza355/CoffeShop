@@ -156,3 +156,58 @@
     content: "\2606\2606";
   }
 }
+
+.main__testimonials {
+  background-color: $darkBg;
+  padding: 5rem 1.5rem;
+  .testimonials__title {
+    @include textStyle("Meddon", 1.9rem, 100, $whiteColor);
+  }
+
+  .testimonials__persons {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2.5rem;
+    overflow: auto hidden;
+  }
+
+  .person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100%;
+  }
+
+  .person__image {
+    border-radius: 100%;
+    width: 4.5rem;
+  }
+
+  .person__information {
+    @include textStyle("", 0.85rem, 100, $textColor);
+    font-style: italic;
+    line-height: 1.8;
+    text-align: center;
+    padding: 1.2rem 0;
+  }
+
+  .person__name {
+    @include textStyle("", 1rem, 200, $whiteColor);
+  }
+
+  .person__role {
+    @include textStyle("", 0.9rem, 100, $darkSecondary);
+    margin-top: 0.4rem;
+  }
+}
+
+.person__social {
+  margin-top: 1.2rem;
+  a {
+    text-decoration: none;
+    color: $whiteColor;
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}
