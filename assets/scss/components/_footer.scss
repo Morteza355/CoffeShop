@@ -1,0 +1,52 @@
+@import "../variables", "../mixins";
+
+.footer {
+  background-color: $lightBg;
+  position: relative;
+  padding: 10rem 1.5rem 3rem 1.5rem;
+}
+
+.footer__contact {
+  background-color: #0f0f0f;
+  padding: 3rem;
+  position: absolute;
+  bottom: 9rem;
+  margin: 0 0.7rem;
+  left: 0;
+
+  h2,
+  h3 {
+    font-family: "Meddon";
+    font-size: 1.7rem;
+    text-align: center;
+  }
+
+  h2 {
+    color: $whiteColor;
+  }
+
+  h3 {
+    color: $darkSecondary;
+  }
+
+  .input-wrapper__input,
+  .input-wrapper__button {
+    width: 100%;
+  }
+
+  .input-wrapper__button {
+    @include BtnStyle(0.8rem 0, $whiteColor, 500, 0.9rem, 0, #000);
+  }
+
+  .contact__input-wrapper {
+    margin-top: 1.5rem;
+  }
+
+  .input-wrapper__input {
+    background-color: $darkBg;
+    border: 1px solid #444;
+    padding: 0.9rem 0 0.9rem 0.9rem;
+    outline: none;
+    color: $whiteColor;
+  }
+}
