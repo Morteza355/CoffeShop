@@ -38,7 +38,12 @@
     @include textStyle("", 0.8rem, 100, $textColor);
     text-decoration: none;
     display: inline-block;
+    transition: 0.3s color;
     margin-top: 0.7rem;
+
+    &:hover {
+      color: $lightSecondary;
+    }
   }
 
   address {
@@ -81,6 +86,12 @@
 
   .input-wrapper__button {
     @include BtnStyle(0.8rem 0, $whiteColor, 500, 0.9rem, 0, #000);
+    transition: 0.3s color, 0.3s background-color;
+
+    &:hover {
+      background-color: $lightSecondary;
+      color: $whiteColor;
+    }
   }
 
   .contact__input-wrapper {
@@ -93,5 +104,11 @@
     padding: 0.9rem 0 0.9rem 0.9rem;
     outline: none;
     color: $whiteColor;
+    transition: 0.3s box-shadow, 0.3s border;
+
+    &:focus {
+      border: 1px solid $lightSecondary;
+      box-shadow: 0px 0px 10px $lightSecondary;
+    }
   }
 }

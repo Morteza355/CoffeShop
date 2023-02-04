@@ -1,21 +1,21 @@
 @import "../variables", "../mixins";
 
+.buttons__list {
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+}
+
+.item__btn {
+  @include headerButton;
+}
+
 .header {
   min-height: 70vh;
 
   .header__top {
     padding: 1.2rem 1rem;
     background-color: $lightBg;
-
-    .buttons__list {
-      display: flex;
-      justify-content: end;
-      gap: 1rem;
-    }
-
-    .item__btn {
-      @include headerButton;
-    }
   }
 
   .header__bottom {
