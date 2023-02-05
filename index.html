@@ -50,10 +50,88 @@
               />
             </div>
             <div class="navbar__buttons">
-              <button class="buttons__catalog">CATALOG</button>
-              <label for="navbar-switcher" class="buttons__list-button">
-                <i class="ri-list-check"></i>
-              </label>
+              <input type="checkbox" hidden id="catalog-switcher" />
+              <input type="checkbox" hidden id="navbar-switcher" />
+              <div class="buttons">
+                <label for="catalog-switcher" class="buttons__catalog"
+                  >CATALOG</label
+                >
+                <label for="navbar-switcher" class="buttons__list-button">
+                  <span class="line"></span>
+                  <span class="line"></span>
+                  <span class="line"></span>
+                </label>
+              </div>
+              <ul class="navbar">
+                <li>
+                  <a href="#">Home</a>
+                </li>
+                <li>
+                  <a href="#">About Us</a>
+                </li>
+                <li>
+                  <a href="#">Services</a>
+                </li>
+                <li>
+                  <a href="#">Shop</a>
+                </li>
+                <li>
+                  <a href="#">Blog</a>
+                </li>
+                <li>
+                  <a href="#">Contacts</a>
+                </li>
+              </ul>
+              <ul class="catalog">
+                <li>
+                  <img
+                    class="catalog__image"
+                    src="/assets/images/coffeebeans.svg"
+                    alt="Coffee Beans"
+                  />
+                  <a href="#">Coffee</a>
+                </li>
+                <li>
+                  <img
+                    class="catalog__image"
+                    src="/assets/images/coffee-machine3.svg"
+                    alt="Coffee Machine"
+                  />
+                  <a href="#">Machines</a>
+                </li>
+                <li>
+                  <img
+                    class="catalog__image"
+                    src="/assets/images/maple-syrup.svg"
+                    alt="Maple Syrup"
+                  />
+                  <a href="#">Syrups</a>
+                </li>
+                <li>
+                  <img
+                    class="catalog__image"
+                    src="/assets/images/vending-machine.svg"
+                    alt="Vending Machine"
+                  />
+                  <a href="#">Vending</a>
+                </li>
+                <li>
+                  <img
+                    class="catalog__image"
+                    src="/assets/images/coffee3.svg"
+                    alt="Coffee"
+                  />
+                  <a href="#">Dishes</a>
+                </li>
+                <li>
+                  <img
+                    class="catalog__image"
+                    src="/assets/images/tea-pot.svg"
+                    alt="Tea Pot"
+                  />
+                  <a href="#">Tea</a>
+                </li>
+              </ul>
             </div>
           </div>
           <div class="bottom__description">

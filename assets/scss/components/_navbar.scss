@@ -60,18 +60,95 @@
     }
 
     .buttons__catalog {
-      @include headerButton(0.8rem, bold, 0.6rem 1rem);
-    }
-
-    .navbar__buttons {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
+      @include headerButton(0.8rem, bold, 0.7rem 1rem);
     }
 
     .buttons__list-button {
-      color: $whiteColor;
-      margin-top: 0.4rem;
+      span {
+        background-color: $whiteColor;
+        height: 1.6px;
+        border-radius: 0.2rem;
+        margin-bottom: 0.2rem;
+        width: 0.8rem;
+        display: block;
+      }
     }
+  }
+}
+
+#navbar-switcher:checked ~ .navbar {
+  display: block;
+}
+
+#catalog-switcher:checked ~ .catalog {
+  display: block;
+}
+
+#navbar-switcher:checked + .buttons span:nth-child(2) {
+  display: none;
+}
+
+#navbar-switcher:checked + .buttons span:first-child {
+  transform: rotate(45deg) translate(-1px, 0);
+}
+
+#navbar-switcher:checked + .buttons span:last-child {
+  transform-origin: left;
+  transform: rotate(-45deg) translate(1px, 0);
+}
+
+.navbar__buttons {
+  .buttons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+  }
+}
+
+.navbar,
+.catalog {
+  position: absolute;
+  background-color: $darkBg;
+  top: 8.5rem;
+  right: 2rem;
+  left: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 5px $lightBg;
+  display: none;
+
+  li:not(:last-child) {
+    border-bottom: 1px solid $lightBg;
+  }
+
+  a {
+    text-decoration: none;
+    @include textStyle("", 0.9rem, 100, $whiteColor);
+    padding: 1.3rem 0;
+    display: inline-block;
+    transition: 0.3s color;
+
+    &:hover {
+      color: $lightSecondary;
+    }
+  }
+}
+
+.catalog {
+  li {
+    padding-left: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .catalog__image {
+    width: 1.25rem;
+  }
+}
+
+.navbar {
+  li {
+    text-align: center;
   }
 }
