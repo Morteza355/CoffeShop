@@ -1,5 +1,14 @@
 @import "../footer", "../navbar", "../../variables", "../../mixins";
 
+.header__bottom {
+  background: url("/assets/images/bg.webp") no-repeat top;
+  background-size: cover;
+}
+
+.description__header {
+  @include textStyle("Meddon", 0.8rem, normal, $whiteColor);
+}
+
 .main__company-logos {
   background-color: $darkBg;
   display: flex;
