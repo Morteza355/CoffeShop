@@ -1,0 +1,37 @@
+.header__bottom {
+  background: url("/assets/images/AboutUsBackground.jpg") no-repeat top;
+  background-size: cover;
+}
+
+.bottom__description {
+  @include centerItem();
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.description__header {
+  @include textStyle("Meddon", 1.8rem, normal, $whiteColor);
+}
+
+.description__bread-crumb {
+  ol {
+    list-style-type: none;
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  a {
+    @include textStyle("", 0.85rem, 100, $textColor);
+    text-decoration: none;
+  }
+
+  li:not(:first-child)::before {
+    content: "▸";
+    display: inline-block;
+    color: $textColor;
+  }
+
+  .active-bread {
+    font-weight: 700;
+  }
+}
